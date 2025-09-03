@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    int somme = 0;
     int T[100];
     int taille;
+    int minNum = T[0];
     printf("donner le nombre des element de tableau: ");
     scanf("%d",&taille);
     for(int i=0; i<taille; i++)
@@ -13,9 +13,13 @@ int main() {
     }
     for(int i=0; i<taille;i++)
     {
-        somme += T[i];
+        if(T[i] < minNum)
+        {
+            minNum = T[i];
+        }
     }
-    printf("la somme est: %d", somme);
+    printf("les nombre minimal est: %d", minNum);
+    
     
     
 
